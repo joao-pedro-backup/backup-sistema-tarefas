@@ -1,0 +1,87 @@
+.signin-body{
+    background-image: url(../../images/low-poly-grid-haikei\ \(1\).svg);
+}
+
+.signin-area{
+    margin: auto;
+    text-align: center;
+    width: 30rem;
+    height: 36rem;
+    border: 0.5px solid lightgray;
+    border-radius: 6px;
+    box-shadow: 0.6rem 0.8rem 1rem lightblue;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.signin-area p{
+    font-family: "Akazan-bk";
+    font-size: 2.1rem;
+}
+
+.signin-btn a{
+    color: rgb(50, 205, 112);
+    font-size: 2rem;
+    font-family: "Akazan-bold";
+}
+
+.signin-area .signin-form{
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem 0;
+}
+
+.signin-form input{
+    position: relative;
+    /* display: block; */
+    border-radius: 0.5rem;
+    border: 0.2px solid rgb(179, 178, 178);
+    margin: 0.5rem;
+    padding: 0.6rem 2rem;
+    font-family: "Akazan-regular";
+    font-size: 1.6rem;
+}
+
+.signin-form input:focus{
+    outline: 0.5px solid rgb(144, 144, 144);
+}
+
+.signin-form-warning{
+    position: relative;
+    left: 5.5rem;
+    width: 60%;
+    margin-top: 0rem;
+    font-family: "Akazan-bk";
+    font-size: 1.2rem;
+    color: red;
+}
+
+.signin-form .submit-btn{
+    width: 92%;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    border: 0.5px solid rgb(199, 161, 132);
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: var(--secondary-background-color);
+    transition: all 850ms ease-in-out;
+}
+
+.signin-form .submit-btn:hover{
+    transform: scale(1.05);
+    background-color: var(--primary-background-color);
+}
+
+.login-btn{
+    position: relative;
+    bottom: 4rem;
+}
+
+.login-link{
+    position: relative;
+    color: var(--primary-background-color);
+}
