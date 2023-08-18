@@ -6,7 +6,6 @@ function getTasks(){
     .then((response)=>response.json())
     .then((data)=>{
         data.forEach((task)=>{
-            
             let taskItem=document.createElement("li");
             taskItem.className="task";
             taskItem.dataset.id=task.id
@@ -63,5 +62,6 @@ function getTasks(){
    })
     .catch((error)=>console.log(error));   
 }
+
 getTasks();
-setInterval(getTasks,6000);
+setInterval(getTasks,10000)
