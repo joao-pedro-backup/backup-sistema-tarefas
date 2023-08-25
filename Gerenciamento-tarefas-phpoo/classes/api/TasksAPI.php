@@ -6,11 +6,15 @@ require_once "Transactions.php";
 require_once "LoggerTXT.php";
 
 class TaskAPI{
+    private static $dataId;
     private static $taskTitle;
     private static $taskDescription;
 
     private function __construct(){}
 
+    public static function getDataId() {
+        return self::$dataId;
+    }
     private static function receiveTask(){
         if($_SERVER["REQUEST_METHOD"] === "POST"){
             self::$taskTitle=$_POST["taskTitle"];
@@ -23,10 +27,18 @@ class TaskAPI{
             $tasksJson=TaskMapper::callDataMapper();
             echo json_encode($tasksJson);
         }
-        
     }
 
+    private static function DeleteTaskMethod(){
+        if($_SERVER["REQUEST_METHOD"] === "DELETE"){
+            $data = json_decode(file_get_contents("php://input"), true);
+            self::$dataId=$data["taskId"];
+        }
+    }
+    
+
     public static function InitClass(){
+        self::DeleteTaskMethod();
         self::receiveTask();
         self::GetTask();
         TaskdataAutentication::processForm();
@@ -34,13 +46,3 @@ class TaskAPI{
 }
 
 TaskAPI::InitClass();
-
-/* header('Content-Type: application/json');
-try {
-    $tasksJson=TaskMapper::callDataMapper();
-    echo json_encode($tasksJson);
-} catch (PDOException $e) {
-    echo json_encode(['error' => 'Database error']);
-} catch (Exception $e) {
-    echo json_encode(['error' => 'Unknown error']);
-} */

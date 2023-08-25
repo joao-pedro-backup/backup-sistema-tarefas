@@ -1,3 +1,6 @@
 {
-    "codeium.enableSearch": true
+    "codeium.enableSearch": true,
+    "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+        "live-preview-extension": true
+    }
 }

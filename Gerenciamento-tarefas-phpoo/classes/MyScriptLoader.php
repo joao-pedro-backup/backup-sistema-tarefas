@@ -14,7 +14,8 @@ class ScriptLoader{
             echo '<link rel="stylesheet" href="../css/global/general.css">';
             break;
         case 'task.php':
-            echo '<script src="../js/FetchAPI/getTaskFetchAPI.js" type="module" defer></script>';
+            echo '<script src="../js/FetchAPI/DeleteTaskFetchAPI.js" defer></script>';
+            echo '<script src="../js/FetchAPI/getTaskFetchAPI.js" defer></script>';
             echo '<script src="../js/createTaskModal.js" defer></script>';
             echo '<script src="../js/descriptionModal.js" defer></script>';
             echo '<script src="../js/FetchApi/taskFormFetchApi.js" defer></script>';

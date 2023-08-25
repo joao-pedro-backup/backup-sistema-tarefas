@@ -1,4 +1,4 @@
-let taskList=document.getElementById("taskList");
+let taskList=document.getElementById("taskList");   
 
 taskList.addEventListener("click", (e)=>{
     const clickedTask=e.target;
