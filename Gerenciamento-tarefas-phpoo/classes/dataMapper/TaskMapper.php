@@ -41,12 +41,11 @@ class TaskMapper{
         return $taskList;
     }
 
-    /* private static function deleteTask(){
+    private static function deleteTask(){
         $stmtDeleteTask=self::$connection->prepare("DELETE FROM tasks WHERE id=:taskId");
         $stmtDeleteTask->bindParam(":taskId",self::$taskId);
         $stmtDeleteTask->execute();
-        echo self::$taskId;
-    } */
+    }
 
     public static function callDataMapper(){
         self::setConnection();
